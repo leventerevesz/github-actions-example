@@ -1,9 +1,5 @@
 #!/bin/sh
 
-if [ -v GITHUB_WORKSPACE]
-    then cd $GITHUB_WORKSPACE
-fi
-
 # Build solution
 docker build -t example-project:ci-build .
 echo "Created docker image example-project:ci-build."
