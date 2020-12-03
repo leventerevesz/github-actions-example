@@ -15,5 +15,4 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
-      # Looks for action in <PROJECT_ROOT_DIRECTORY>/action-a
-        run: ./build-ci.sh
+      - run: ./build-ci.sh
