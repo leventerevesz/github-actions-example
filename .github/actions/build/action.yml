@@ -5,4 +5,4 @@ description: Builds solution with ESP-IDF in a docker container
 runs:
   using: docker
   image: docker://leventerevesz/esp-idf:4.1
-  entrypoint: /usr/bin/ci_build.sh
+  entrypoint: ./ci_build.sh
