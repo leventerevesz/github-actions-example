@@ -1,0 +1,19 @@
+name: 'Build ESP IDF project'
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      [ $default-branch ]
+      
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v1
+      # Looks for action in <PROJECT_ROOT_DIRECTORY>/action-a
+      - uses: ./github/actions/build-action
