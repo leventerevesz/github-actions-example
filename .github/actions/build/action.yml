@@ -1,8 +1,8 @@
 # action.yml
-name: 'ESP-IDF build'
-description: 'Builds solution with ESP-IDF in a docker container'
+name: ESP-IDF build
+description: Builds solution with ESP-IDF in a docker container
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-
+  using: docker
+  image: docker://leventerevesz/esp-idf:4.1
+  entrypoint: /usr/bin/ci_build.sh
