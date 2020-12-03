@@ -19,12 +19,17 @@ jobs:
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Check out this repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v2
-      # Run the build script
-      - run: ./build-ci.sh
-      # Upload artifact
-      - uses: actions/upload-artifact@v2
+      - name: Checkout current repo
+        uses: actions/checkout@v2
+      
+      - name: Run the build action
+        uses: ./github/actions/build
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
           name: binaries
-          path: build.zip
+          path: |
+            build/blink.bin
+            build/bootloader/bootloader.bin
+            build/partition_table/partition-table.bin
