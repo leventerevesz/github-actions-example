@@ -1,8 +1,7 @@
 name: 'Build ESP IDF project'
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the master branch
+  # Trigger the workflow on push only for the master branch
   push:
     branches:
       [ $default-branch ]
