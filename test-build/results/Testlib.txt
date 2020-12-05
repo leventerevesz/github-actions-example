@@ -1,0 +1,6 @@
+test/Testlib.c:28:test_add:PASS
+test/Testlib.c:29:test_substract:PASS
+
+-----------------------
+2 Tests 0 Failures 0 Ignored 
+OK
